@@ -7,4 +7,21 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "google-genai>=1.27.0",
+    "pydantic>=2.11.7",
+    "pydantic-ai>=0.4.7",
+    "pyyaml>=6.0.2",
+    "together>=1.5.21",
+]
+[tool.setuptools]
+packages=["litreview"]
+
+[tool.uv.sources]
+litreview = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "litreview",
+    "notebook>=7.4.4",
+]
